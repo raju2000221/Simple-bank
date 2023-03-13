@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Bank</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="text-5xl	text-center mt-6 font-semibold"> Save some money
+             <span class="font-semibold text-violet-600"> For your Future Wife !!!</span></h1>
+    </header>
+    <main>
+       <section class="mt-12">
+        <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto ">
+            <div class="bg-green-500  p-8 text-white rounded">
+                <h1 class="text-2xl">Deposite</h1>
+                <h2 class="text-5xl">00 tk</h2>
+            </div>
+            <div class="bg-amber-600  p-8 text-white rounded">
+                <h1 class="text-2xl">Withdraw</h1>
+                <h2 class="text-5xl">00 tk</h2>
+            </div>
+            <div class="bg-violet-500   p-8 text-white rounded">
+                <h1 class="text-2xl">Balance</h1>
+                <h2 class="text-5xl">00 tk</h2>
+            </div>
+        
+          </div>
+       </section>
+       <section>
+        <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto mt-12 ">
+            <div class="bg-sky-400  p-8  rounded">
+                <div>
+                    <h2 class="mb-3 text-white text-3xl">Deposite Balance</h2>
+                    
+                    <input class="p-1 block mb-3 w-6/12  rounded" type="email" name="" id="deposite-amount" placeholder="Enter your amount">
+                    
+                    <button id="btn-diposite" class="bg-sky-700 mt-3 px-6 py-2 rounded text-white Font-medium hover:bg-green-700">Diposite</button>
+                </div>
+            </div>
+            <div class="bg-orange-400  p-8 rounded">
+                <div>
+                    <h2 class="mb-3 text-white text-3xl">Withdraw Balance</h2>
+                    
+                    <input class="p-1 block mb-3 w-6/12  rounded" type="email" name="" id="user-email" placeholder="Enter your amount">
+                    
+                    <button id="btn-submit" class="bg-sky-700 mt-3 px-6 py-2 rounded text-white Font-medium hover:bg-amber-700">Withdraw</button>
+                </div>
+            </div>
+          
+        
+          </div>
+       </section>
+    </main>
+    <script src="bank.js"></script>
+</body>
+</html>
