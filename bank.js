@@ -35,21 +35,45 @@ document.getElementById('btn-withdraw').addEventListener('click',function(){
     const withdrawamount = document.getElementById('withdraw-amount')
     const userInputValue = withdrawamount.value;
     const userWithdrawAmount = parseFloat(userInputValue);
+   
+    withdrawamount.value = '';
+
+    if(isNaN(userWithdrawAmount)){
+        alert('please Provide valid number')
+
+        return;
+    }
     
+    // alert fro not enough balance
+   
     
     // get initial withdraw Blanace
     const withdraw = document.getElementById('Withdraw-total');
     const withdrawInnerText = withdraw.innerText;
     const withdrawStringToInt = parseFloat(withdrawInnerText);
-     const totalwithdraw = userWithdrawAmount + withdrawStringToInt;
-     withdraw.innerText = totalwithdraw;
 
-     const balanceTotalElement =document.getElementById('balance-total')
+     
+
+     const balanceTotalElement = document.getElementById('balance-total')
      const previousBalanceString = balanceTotalElement.innerText;
      const previousTotalBalance = parseFloat(previousBalanceString);
-     const totalBalance = previousTotalBalance - totalwithdraw;
+
+    
+     
+    if( userWithdrawAmount > previousTotalBalance){
+        alert('You Have Not enough Money For Withdraw');
+        return ;
+     }
+
+
+     const totalwithdraw = userWithdrawAmount + withdrawStringToInt;
+     withdraw.innerText = totalwithdraw;
+     
+     const totalBalance = previousTotalBalance - userWithdrawAmount;
      balanceTotalElement.innerText = totalBalance;
+
+  
         
 
-     withdrawamount.value = '';
+    
 })
